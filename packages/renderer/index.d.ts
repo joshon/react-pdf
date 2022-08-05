@@ -367,7 +367,22 @@ declare namespace ReactPDF {
    * The <Defs /> element is used to store graphical objects that will be used at a later time. Objects created inside a <Defs /> element are not rendered directly. To display them you have to reference them
    */
   class Defs extends React.Component<DefsProps> {}
+  
+  
+  interface UseProps extends SVGPresentationAttributes {
+    width?: number | string;
+    height?: number | string;
+    x: string | number;
+    y: string | number;
+    href: string;
+  }
 
+  /**
+    * The <use> element takes nodes from within the SVG document, and duplicates them somewhere else.
+   */
+  class Use extends React.Component<UseProps> {}
+  
+  
   interface ClipPathProps {
     id?: string;
   }
@@ -532,6 +547,7 @@ declare const Tspan: typeof ReactPDF.Tspan;
 declare const G: typeof ReactPDF.G;
 declare const Stop: typeof ReactPDF.Stop;
 declare const Defs: typeof ReactPDF.Defs;
+declare const Use: typeof ReactPDF.Use;
 declare const ClipPath: typeof ReactPDF.ClipPath;
 declare const LinearGradient: typeof ReactPDF.LinearGradient;
 declare const RadialGradient: typeof ReactPDF.RadialGradient;
@@ -571,6 +587,7 @@ export {
   G,
   Stop,
   Defs,
+  Use,
   ClipPath,
   LinearGradient,
   RadialGradient,
