@@ -1,5 +1,6 @@
 export const G = 'G';
 export const Svg = 'SVG';
+export const Use = 'USE';
 export const View = 'VIEW';
 export const Text = 'TEXT';
 export const Link = 'LINK';
